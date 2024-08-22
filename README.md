@@ -232,61 +232,6 @@ Tương tự như ở trên, ta sẽ có 1 website y chang **Handlebars**.
   <img src="https://github.com/user-attachments/assets/f8e7f629-912e-4917-92e0-2536e2434014" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
-## MongoDB
-
-### Bước 1
-Mở Terminal của thư mục `backend` lên, tạo tài nguyên backend bằng cách chạy:
-```
-npm init
-```
-rồi hoàn thành quy trình cài đặt đầu tiên.
-
-Sau đó, cài đặt những gói thư viện cần thiết này:
-```
-npm install express nodemon morgan mongoose cors method-override dotenv bcrypt express-session express-rate-limit fs jsonwebtoken
-```
-
-Cụ thể hơn:
-* `CORS (Cross-origin resource sharing)`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
-```
-npm install cors
-```
-
-### Bước 2
-Mở Terminal của thư mục dự án lên, tạo tài nguyên frontend bằng cách chạy:
-```
-npm create vite@latest
-```
-Đặt tên là `frontend`, rồi hoàn thành quy trình cài đặt đầu tiên (Chọn `React` + `Javascript`).
-
-Xem chi tiết tại [đây](https://github.com/homanhquan1812/ReactJS).
-
-> PostgreSQL 
-
-## PostgreSQL
-> Về cơ bản, thay đổi database chỉ ảnh hưởng tới **backend**, không ảnh hưởng tới **frontend**.
-
-Cài thêm thư viện sau ở backend:
-* `pg`: Chứa các dữ liệu cần thiết để kết nối database PostgreSQL.
-```
-npm install pg
-```
-
-## MySQL
-Cài thêm thư viện sau ở backend:
-* `mysql2`: Chứa các dữ liệu cần thiết để kết nối database MySQL (Bản `mysql2` tốt hơn `mysql`).
-```
-npm install mysql2
-```
-
-**Known issues**: Bảng **products** có constraint **NOT NULL** nên trong phần edit, phải thay đổi **tất cả các dòng** (chỉ cần viết lại cũng được), nếu không thì những dòng không chỉnh sửa sẽ trả về **NULL**.
-
-
-# ReactJS
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/f8e7f629-912e-4917-92e0-2536e2434014" alt="NodeJS + ExpressJS Logo" width="600">
-</div>
-
 ## Bước 1
 Tạo project ReactJS bằng **Vite**, phiên bản này tối ưu hơn ReactJS truyển thống:
 ```
@@ -422,3 +367,50 @@ export default App
 ```
 
 Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
+
+## MongoDB
+
+### Bước 1
+Mở Terminal của thư mục `backend` lên, tạo tài nguyên backend bằng cách chạy:
+```
+npm init
+```
+rồi hoàn thành quy trình cài đặt đầu tiên.
+
+Sau đó, cài đặt những gói thư viện cần thiết này:
+```
+npm install express nodemon morgan mongoose cors method-override dotenv bcrypt express-session express-rate-limit fs jsonwebtoken
+```
+
+Cụ thể hơn:
+* `CORS (Cross-origin resource sharing)`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
+```
+npm install cors
+```
+
+### Bước 2
+Mở Terminal của thư mục dự án lên, tạo tài nguyên frontend bằng cách chạy:
+```
+npm create vite@latest
+```
+Đặt tên là `frontend`, rồi hoàn thành quy trình cài đặt đầu tiên (Chọn `React` + `Javascript`).
+
+Xem chi tiết tại [đây](https://github.com/homanhquan1812/ReactJS).
+
+> PostgreSQL 
+
+## PostgreSQL
+> Về cơ bản, thay đổi database chỉ ảnh hưởng tới **backend**, không ảnh hưởng tới **frontend**.
+
+Cài thêm thư viện sau ở backend:
+* `pg`: Chứa các dữ liệu cần thiết để kết nối database PostgreSQL.
+```
+npm install pg
+```
+
+## MySQL
+Cài thêm thư viện sau ở backend:
+* `mysql2`: Chứa các dữ liệu cần thiết để kết nối database MySQL (Bản `mysql2` tốt hơn `mysql`).
+```
+npm install mysql2
+```
