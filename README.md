@@ -393,10 +393,7 @@ Mở Terminal của thư mục dự án lên, tạo tài nguyên frontend bằng
 ```
 npm create vite@latest
 ```
-Đặt tên là `frontend`, rồi hoàn thành quy trình cài đặt đầu tiên (Chọn `React` + `Javascript`).
-
-Xem chi tiết tại [đây](https://github.com/homanhquan1812/ReactJS).
-
+Đặt tên là `frontend`, rồi hoàn thành quy trình cài đặt đầu tiên (Chọn `React` + `Javascript`). Thực hiện các thao tác ở các bước đầu.
 ## PostgreSQL
 > Về cơ bản, thay đổi database chỉ ảnh hưởng tới **backend**, không ảnh hưởng tới **frontend**.
 
