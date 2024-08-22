@@ -397,8 +397,6 @@ npm create vite@latest
 
 Xem chi tiết tại [đây](https://github.com/homanhquan1812/ReactJS).
 
-> PostgreSQL 
-
 ## PostgreSQL
 > Về cơ bản, thay đổi database chỉ ảnh hưởng tới **backend**, không ảnh hưởng tới **frontend**.
 
