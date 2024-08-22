@@ -1,8 +1,9 @@
+# NodeJS & ExpressJS
 <div align="center">
   <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fphm9w85asky1ja15jg4y.png" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
-# Project này gồm tính năng nổi bật gì của NodeJS & ExpressJS?
+## Project này gồm tính năng nổi bật gì của NodeJS & ExpressJS?
 1. `Bcrypt`.
 2. `Middleware`: Là đoạn mã trung gian nằm giữa **req** và **res**, thường được sử dụng để xác thực, ghi log, xử lý lỗi,...
 3. `Rate Limit`.
@@ -21,12 +22,12 @@ node key_generation.js
 * `404`: Không tìm thấy dữ liệu.
 * `500`: Lỗi server (Thường xảy ra ở Backend như code không phù hợp,...).
 
-# Handlebars
+## Handlebars
 <div align="center">
   <img src="https://github.com/user-attachments/assets/a91e185f-1b6a-48f6-bdc8-baa638873cb7" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
-## Bước 1
+### Bước 1
 Mở Terminal lên, tạo dự án bằng cách chạy:
 ```
 npm init
@@ -101,7 +102,7 @@ npm install mongoose-delete
 
 Ở đây, ta dùng định dạng `.hbs` cho các file Handlebars.
 
-## Bước 2
+### Bước 2
 Ta cần hiểu cơ cấu project như sau:
 ```
 Project
@@ -147,7 +148,7 @@ Giải thích các thư mục, file:
 * `util`: Chứa các tiện ích cho website.
 * `.env`: Lưu String kết nối database, cổng PORT và các key API khác như SECRET_API, KEY_API,... 
 
-## Bước 3
+### Bước 3
 Vào file <b>package.json</b>, thêm dòng này tại <b>scripts</b>:
 ```
 "start": "nodemon src/index.js",
@@ -163,14 +164,14 @@ npm start
 
 Mở web `localhost:3000`. Đây là website mà ta sẽ xây dựng. Muốn ngưng host thì t nhấn `Ctrl + C`.
 
-# EJS
+## EJS
 <div align="center">
   <img src="https://github.com/user-attachments/assets/9c4765d7-c528-4069-9b31-493c23006cd1" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
 > Về cơ bản, phần Backend của **EJS** và **Handlebars** là như nhau.
 
-## Bước 1
+### Bước 1
 Tương tự ở trên, nhưng cài tổng bằng:
 ```
 npm install express nodemon morgan mongoose ejs express-ejs-layouts method-override dotenv bcrypt express-session express-rate-limit fs jsonwebtoken
@@ -186,7 +187,7 @@ npm install ejs
 npm install express-ejs-layouts
 ```
 
-## Bước 2
+### Bước 2
 Ta cần hiểu cơ cấu project như sau:
 ```
 Project
@@ -222,7 +223,7 @@ Project
   |__ package.json
 ```
 
-## Bước 3
+### Bước 3
 Tương tự như ở trên, ta sẽ có 1 website y chang **Handlebars**.
 
 # ReactJS
