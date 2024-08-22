@@ -368,7 +368,7 @@ export default App
 
 Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
 
-## MongoDB
+## MERN Stack
 
 ### Bước 1
 Mở Terminal của thư mục `backend` lên, tạo tài nguyên backend bằng cách chạy:
