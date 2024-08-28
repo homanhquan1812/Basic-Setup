@@ -15,28 +15,27 @@ Cách chạy: Vào thư mục `util`, gõ:
 node key_generation.js
 ```
 
-1 vài status từ các lệnh thực thi **CRUD** trên dữ liệu JSON:
+## Các status cơ bản từ các lệnh thực thi **CRUD** trên dữ liệu JSON
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d7acc486-93da-433a-b647-24eafae76aca" width="600">
+</div>
+
 * `200`: Lấy, cập nhật, xóa dữ liệu thành công.
 * `201`: Tạo dữ liệu thành công.
 * `401`: Lỗi xác thực (Login, Register,...).
 * `404`: Không tìm thấy dữ liệu.
 * `500`: Lỗi server (Thường xảy ra ở Backend như code không phù hợp,...).
 
-## Handlebars
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/a91e185f-1b6a-48f6-bdc8-baa638873cb7" alt="NodeJS + ExpressJS Logo" width="600">
-</div>
-
-### Bước 1
+## Các gói thư viện All-in-one
 Mở Terminal lên, tạo dự án bằng cách chạy:
 ```
 npm init
 ```
 rồi hoàn thành quy trình cài đặt đầu tiên.
 
-Sau đó, cài đặt những gói thư viện cần thiết này:
+Sau đó, cài đặt những gói thư viện All-in-one này:
 ```
-npm install express nodemon morgan mongoose express-handlebars method-override dotenv bcrypt express-session express-rate-limit fs jsonwebtoken
+npm install express nodemon morgan mongoose express-handlebars ejs express-ejs-layouts dotenv bcrypt express-session express-rate-limit fs jsonwebtoken cors pg mysql2
 ```
 
 Cụ thể hơn:
@@ -60,10 +59,6 @@ npm install mongoose
 ```
 npm install express-handlebars
 ```
-* **Method Override**: Được dùng để cập nhật hoặc xóa dữ liệu trong database.
-```
-npm install method-override
-```
 * **Dotenv**: Giúp lưu trữ các thông tin nhạy cảm như **API KEY** hoặc **SECRET KEY** bên ngoài mã nguồn, giảm nguy cơ lộ thông tin khi chia sẻ mã nguồn.
 ```
 npm install dotenv
@@ -71,6 +66,26 @@ npm install dotenv
 * **Bcrypt**: Tăng bảo mật cho Login/Register.
 ```
 npm install bcrypt
+```
+* `CORS (Cross-origin resource sharing)`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
+```
+npm install cors
+```
+* `pg`: Chứa các dữ liệu cần thiết để kết nối database PostgreSQL.
+```
+npm install pg
+```
+* `mysql2`: Chứa các dữ liệu cần thiết để kết nối database MySQL (Bản `mysql2` tốt hơn `mysql`).
+```
+npm install mysql2
+```
+* **EJS**: Chứa các tập tin cần thiết của EJS để thay thế cho HTML thông thường.
+```
+npm install ejs
+```
+* **EJS Layouts**: Không giống như **Handlebars**, ta phải cài thêm **layouts** để chứa các file page.
+```
+npm install express-ejs-layouts
 ```
 * **Session & Cookie**:
   - **Session**: Là phiên làm việc giữa client và server, thông tin phiên làm việc được lưu trữ trên server và được liên kết với 1 session ID duy nhất. Session sẽ kết thúc khi bạn tắt trình duyệt. **Cơ cấu hoạt động:** Sau khi đăng nhập xong (mình sẽ tạm gọi đây là request đầu tiên), server sẽ tạo một session và dữ liệu của session sẽ được lưu ở trên bộ nhớ của server. Mỗi session thì có một ID riêng, và ID này sẽ được lưu ở cookie trên trình duyệt của người dùng. Từ request thứ 2 trở đi, cookie sẽ được gửi kèm theo mỗi request. Server có thể so khớp session ID trong cookies được gửi kèm kia với session data lưu ở trong bộ nhớ, qua đó xác thực danh tính của người dùng vào trả về response. Đến khi đăng xuất, toàn bộ session data này sẽ bị xóa khỏi bộ nhớ.
@@ -100,9 +115,14 @@ npm install jsonwebtoken
 npm install mongoose-delete
 ```
 
+## Handlebars
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a91e185f-1b6a-48f6-bdc8-baa638873cb7" alt="NodeJS + ExpressJS Logo" width="600">
+</div>
+
 Ở đây, ta dùng định dạng `.hbs` cho các file Handlebars.
 
-### Bước 2
+### Bước 1
 Ta cần hiểu cơ cấu project như sau:
 ```
 Project
@@ -148,7 +168,7 @@ Giải thích các thư mục, file:
 * `util`: Chứa các tiện ích cho website.
 * `.env`: Lưu String kết nối database, cổng PORT và các key API khác như SECRET_API, KEY_API,... 
 
-### Bước 3
+### Bước 2
 Vào file <b>package.json</b>, thêm dòng này tại <b>scripts</b>:
 ```
 "start": "nodemon src/index.js",
@@ -171,23 +191,9 @@ Mở web `localhost:3000`. Đây là website mà ta sẽ xây dựng. Muốn ng�
 
 > Về cơ bản, phần Backend của **EJS** và **Handlebars** là như nhau.
 
+Ở đây, ta dùng định dạng `.ejs` cho các file Handlebars.
+
 ### Bước 1
-Tương tự ở trên, nhưng cài tổng bằng:
-```
-npm install express nodemon morgan mongoose ejs express-ejs-layouts method-override dotenv bcrypt express-session express-rate-limit fs jsonwebtoken
-```
-
-Cụ thể hơn:
-* **EJS**: Chứa các tập tin cần thiết của EJS để thay thế cho HTML thông thường.
-```
-npm install ejs
-```
-* **EJS Layouts**: Không giống như **Handlebars**, ta phải cài thêm **layouts** để chứa các file page.
-```
-npm install express-ejs-layouts
-```
-
-### Bước 2
 Ta cần hiểu cơ cấu project như sau:
 ```
 Project
@@ -223,7 +229,7 @@ Project
   |__ package.json
 ```
 
-### Bước 3
+### Bước 2
 Tương tự như ở trên, ta sẽ có 1 website y chang **Handlebars**.
 
 # ReactJS
@@ -369,24 +375,8 @@ export default App
 Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
 
 ## MERN Stack
-
 ### Bước 1
-Mở Terminal của thư mục `backend` lên, tạo tài nguyên backend bằng cách chạy:
-```
-npm init
-```
-rồi hoàn thành quy trình cài đặt đầu tiên.
-
-Sau đó, cài đặt những gói thư viện cần thiết này:
-```
-npm install express nodemon morgan mongoose cors method-override dotenv bcrypt express-session express-rate-limit fs jsonwebtoken
-```
-
-Cụ thể hơn:
-* `CORS (Cross-origin resource sharing)`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
-```
-npm install cors
-```
+Mở Terminal của thư mục `backend` lên, cài đặt các gói backend ở trên.
 
 ### Bước 2
 Mở Terminal của thư mục dự án lên, tạo tài nguyên frontend bằng cách chạy:
@@ -394,18 +384,4 @@ Mở Terminal của thư mục dự án lên, tạo tài nguyên frontend bằng
 npm create vite@latest
 ```
 Đặt tên là `frontend`, rồi hoàn thành quy trình cài đặt đầu tiên (Chọn `React` + `Javascript`). Thực hiện các thao tác ở các bước đầu.
-## PostgreSQL
-> Về cơ bản, thay đổi database chỉ ảnh hưởng tới **backend**, không ảnh hưởng tới **frontend**.
 
-Cài thêm thư viện sau ở backend:
-* `pg`: Chứa các dữ liệu cần thiết để kết nối database PostgreSQL.
-```
-npm install pg
-```
-
-## MySQL
-Cài thêm thư viện sau ở backend:
-* `mysql2`: Chứa các dữ liệu cần thiết để kết nối database MySQL (Bản `mysql2` tốt hơn `mysql`).
-```
-npm install mysql2
-```
