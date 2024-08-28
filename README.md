@@ -27,6 +27,10 @@ node key_generation.js
 * `500`: Lỗi server (Thường xảy ra ở Backend như code không phù hợp,...).
 
 ## Các gói thư viện All-in-one
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0da0bd7f-e8b2-4f0a-8f01-b2869e572ca8" alt="NodeJS + ExpressJS Logo" width="600">
+</div>
+
 Mở Terminal lên, tạo dự án bằng cách chạy:
 ```
 npm init
@@ -34,40 +38,51 @@ npm init
 rồi hoàn thành quy trình cài đặt đầu tiên.
 
 Sau đó, cài đặt những gói thư viện All-in-one này:
+
+**1. MERN/PERN Stack**
 ```
-npm install express nodemon morgan mongoose express-handlebars ejs express-ejs-layouts dotenv bcrypt express-session express-rate-limit fs jsonwebtoken cors pg mysql2
+npm install express nodemon morgan mongoose dotenv bcrypt express-session express-rate-limit fs jsonwebtoken cors pg mysql2
+```
+
+**2. Handlebars/EJS**
+```
+npm install express nodemon morgan mongoose express-handlebars ejs express-ejs-layouts dotenv method-override bcrypt express-session express-rate-limit fs jsonwebtoken pg mysql2
 ```
 
 Cụ thể hơn:
-* <b>Express</b>: Chứa các tập tin cần thiết của NodeJS và ExpressJS để xây dựng Backend.
+* `express`: Chứa các tập tin cần thiết của NodeJS và ExpressJS để xây dựng Backend.
 ```
 npm install express
 ```
-* <b>Nodemon</b>: Giúp khởi động lại ứng dụng Node khi phát hiện có sự thay đổi file hoặc code trong file của dự án.
+* `nodemon`: Giúp khởi động lại ứng dụng Node khi phát hiện có sự thay đổi file hoặc code trong file của dự án.
 ```
-npm install -g nodemon
+npm install nodemon
 ```
-* <b>Morgan</b>: Cho phép ta dễ dàng ghi lại các yêu cầu, lỗi và hơn thế nữa vào **Console/Terminal**. Thường được sử dụng để coi web hỗ trợ Real-time Data (cập nhật thông tin ngay lập tức) hay không.
+* `morgan`: Cho phép ta dễ dàng ghi lại các yêu cầu, lỗi và hơn thế nữa vào **Console/Terminal**. Thường được sử dụng để coi web hỗ trợ Real-time Data (cập nhật thông tin ngay lập tức) hay không.
 ```
 npm install morgan
 ```
-* <b>Mongosse</b>: Là một thư viện mô hình hóa đối tượng (Object Data Model - ODM) cho MongoDB và Node.js, được dùng để quản lý các kiểu dữ liệu từ database để website có thể sử dụng.
+* `mongoose`: Là một thư viện mô hình hóa đối tượng (Object Data Model - ODM) cho MongoDB và Node.js, được dùng để quản lý các kiểu dữ liệu từ database để website có thể sử dụng.
 ```
 npm install mongoose
 ```
-* <b>Handlebars</b>: Chứa các tập tin cần thiết của Handlebars để thay thế cho HTML thông thường.
+* `express-handlebars`: Chứa các tập tin cần thiết của Handlebars để thay thế cho HTML thông thường.
 ```
 npm install express-handlebars
 ```
-* **Dotenv**: Giúp lưu trữ các thông tin nhạy cảm như **API KEY** hoặc **SECRET KEY** bên ngoài mã nguồn, giảm nguy cơ lộ thông tin khi chia sẻ mã nguồn.
+* `dotenv`: Giúp lưu trữ các thông tin nhạy cảm như **API KEY** hoặc **SECRET KEY** bên ngoài mã nguồn, giảm nguy cơ lộ thông tin khi chia sẻ mã nguồn.
 ```
 npm install dotenv
 ```
-* **Bcrypt**: Tăng bảo mật cho Login/Register.
+* `bcrypt`: Tăng bảo mật cho Login/Register.
 ```
 npm install bcrypt
 ```
-* `CORS (Cross-origin resource sharing)`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
+* `method-override`: Dùng để cập nhật/xóa dữ liệu (Chỉ dùng cho Handlebars/EJS).
+```
+npm install method-override
+```
+* `cors`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
 ```
 npm install cors
 ```
@@ -79,30 +94,30 @@ npm install pg
 ```
 npm install mysql2
 ```
-* **EJS**: Chứa các tập tin cần thiết của EJS để thay thế cho HTML thông thường.
+* `ejs`: Chứa các tập tin cần thiết của EJS để thay thế cho HTML thông thường.
 ```
 npm install ejs
 ```
-* **EJS Layouts**: Không giống như **Handlebars**, ta phải cài thêm **layouts** để chứa các file page.
+* `express-ejs-layouts`: Không giống như **Handlebars**, ta phải cài thêm **layouts** để chứa các file page.
 ```
 npm install express-ejs-layouts
 ```
-* **Session & Cookie**:
+* `express-session`: Session & Cookie
   - **Session**: Là phiên làm việc giữa client và server, thông tin phiên làm việc được lưu trữ trên server và được liên kết với 1 session ID duy nhất. Session sẽ kết thúc khi bạn tắt trình duyệt. **Cơ cấu hoạt động:** Sau khi đăng nhập xong (mình sẽ tạm gọi đây là request đầu tiên), server sẽ tạo một session và dữ liệu của session sẽ được lưu ở trên bộ nhớ của server. Mỗi session thì có một ID riêng, và ID này sẽ được lưu ở cookie trên trình duyệt của người dùng. Từ request thứ 2 trở đi, cookie sẽ được gửi kèm theo mỗi request. Server có thể so khớp session ID trong cookies được gửi kèm kia với session data lưu ở trong bộ nhớ, qua đó xác thực danh tính của người dùng vào trả về response. Đến khi đăng xuất, toàn bộ session data này sẽ bị xóa khỏi bộ nhớ.
 
   - **Cookie**: Là đoạn dữ liệu được lưu trữ trong trình duyệt, thường được sử dụng để lưu trữ session ID, sở thích của người dùng trên Internet,...
 ```
 npm install express-session
 ```
-* **Rate limit**: Giới hạn số lần đăng nhập sai.
+* `express-rate-limit`: Giới hạn số lần đăng nhập sai.
 ```
 npm install express-rate-limit
 ```
-* **Fs**: Ghi đè file, ở project này thì dùng để viết ngẫu nhiên các thông tin nhạy cảm như `API_KEY` và `SECRET_KEY` trong file `keygeneration.js` ở dưới.
+* `fs`: Ghi đè file, ở project này thì dùng để viết ngẫu nhiên các thông tin nhạy cảm như `API_KEY` và `SECRET_KEY` trong file `keygeneration.js` ở dưới.
 ```
 npm install fs
 ```
-* **JWT (JSON Web Token)**: Là một tiêu chuẩn mở cho việc tạo ra các token truy cập an toàn dựa trên JSON, thường được sử dụng để xác thực và ủy quyền người dùng trong ứng dụng web và di động.
+* `jsonwebtoken`: JWT là một tiêu chuẩn mở cho việc tạo ra các token truy cập an toàn dựa trên JSON, thường được sử dụng để xác thực và ủy quyền người dùng trong ứng dụng web và di động.
 
 Thông thường, nếu so với `Session`:
    * `Session`: Bảo mật tốt hơn. Nhược điểm là nếu hoạt động nhiều server cùng 1 lúc, session ID gửi kèm theo request thì có thể được tìm thấy ở server này nhưng lại không ở server khác, dẫn đến trải nghiệm tồi tệ.
@@ -110,7 +125,7 @@ Thông thường, nếu so với `Session`:
 ```
 npm install jsonwebtoken
 ```
-* **Mongoose Delete** (Tùy chọn): Thay vì xóa hẳn dữ liệu khỏi database, ta dùng thư viện để **xóa mềm** bằng cách đặt `deleted: true` hoặc `deleted: false`.
+* `mongoose-delete` (Tùy chọn - Chỉ dành cho MongoDB): Thay vì xóa hẳn dữ liệu khỏi database, ta dùng thư viện để **xóa mềm** bằng cách đặt `deleted: true` hoặc `deleted: false`.
 ```
 npm install mongoose-delete
 ```
