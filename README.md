@@ -386,15 +386,3 @@ export default App
 ```
 
 Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
-
-## MERN Stack
-### Bước 1
-Mở Terminal của thư mục `backend` lên, cài đặt các gói backend ở trên.
-
-### Bước 2
-Mở Terminal của thư mục dự án lên, tạo tài nguyên frontend bằng cách chạy:
-```
-npm create vite@latest
-```
-Đặt tên là `frontend`, rồi hoàn thành quy trình cài đặt đầu tiên (Chọn `React` + `Javascript`). Thực hiện các thao tác ở các bước đầu.
-
