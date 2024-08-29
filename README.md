@@ -31,6 +31,7 @@ node key_generation.js
   <img src="https://github.com/user-attachments/assets/0da0bd7f-e8b2-4f0a-8f01-b2869e572ca8" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
+### Bước 1
 Mở Terminal lên, tạo dự án bằng cách chạy:
 ```
 npm init
@@ -130,6 +131,24 @@ npm install jsonwebtoken
 npm install mongoose-delete
 ```
 
+
+### Bước 2
+Vào file <b>package.json</b>, thêm dòng này tại <b>scripts</b>:
+```
+"start": "nodemon src/index.js",
+```
+và chỉnh sửa dòng này ở trên:
+```
+"main": "src/index.js",
+```
+Gõ lệnh này để host backend:
+```
+npm start
+```
+
+Mở web `localhost:3000`. Đây là website mà ta sẽ xây dựng. Muốn ngưng host thì t nhấn `Ctrl + C`.
+
+
 ## Handlebars
 <div align="center">
   <img src="https://github.com/user-attachments/assets/a91e185f-1b6a-48f6-bdc8-baa638873cb7" alt="NodeJS + ExpressJS Logo" width="600">
@@ -137,7 +156,6 @@ npm install mongoose-delete
 
 Ở đây, ta dùng định dạng `.hbs` cho các file Handlebars.
 
-### Bước 1
 Ta cần hiểu cơ cấu project như sau:
 ```
 Project
@@ -183,22 +201,6 @@ Giải thích các thư mục, file:
 * `util`: Chứa các tiện ích cho website.
 * `.env`: Lưu String kết nối database, cổng PORT và các key API khác như SECRET_API, KEY_API,... 
 
-### Bước 2
-Vào file <b>package.json</b>, thêm dòng này tại <b>scripts</b>:
-```
-"start": "nodemon src/index.js",
-```
-và chỉnh sửa dòng này ở trên:
-```
-"main": "src/index.js",
-```
-Gõ lệnh này để host backend:
-```
-npm start
-```
-
-Mở web `localhost:3000`. Đây là website mà ta sẽ xây dựng. Muốn ngưng host thì t nhấn `Ctrl + C`.
-
 ## EJS
 <div align="center">
   <img src="https://github.com/user-attachments/assets/9c4765d7-c528-4069-9b31-493c23006cd1" alt="NodeJS + ExpressJS Logo" width="600">
@@ -208,7 +210,6 @@ Mở web `localhost:3000`. Đây là website mà ta sẽ xây dựng. Muốn ng�
 
 Ở đây, ta dùng định dạng `.ejs` cho các file Handlebars.
 
-### Bước 1
 Ta cần hiểu cơ cấu project như sau:
 ```
 Project
@@ -243,9 +244,6 @@ Project
   |__ package-lock.json
   |__ package.json
 ```
-
-### Bước 2
-Tương tự như ở trên, ta sẽ có 1 website y chang **Handlebars**.
 
 # ReactJS
 
