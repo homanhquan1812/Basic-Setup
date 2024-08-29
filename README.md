@@ -264,7 +264,7 @@ Chọn **React** rồi **Javascript**, sau đó hoàn thành quy trình cài đ�
 ## Bước 2
 Cài đặt những gói thư viện cần thiết này:
 ```
-npm install react-router-dom react-helmet axios jwt-decode vite-plugin-mkcert
+npm install react-router-dom react-helmet axios jwt-decode vite-plugin-mkcert jquery
 ```
 
 Cụ thể hơn:
@@ -272,6 +272,7 @@ Cụ thể hơn:
 * `react-helmet`: Dùng để quản lý các tài nguyên trong `<head>` hoặc **script** trong `<body>`,...
 * `jwt-decode`: Giải mã token của JWT.
 * `vite-plugin-mkcert`: Dùng `https` thay vì `http` cho web ReactJS.
+* `jquery`: Thư viện jQuery.
 **Chú ý**: Trong các dự án lớn, đừng nhét các file `css` và `js` vào **Helmet**, sẽ gây lỗi load file CSS và JS chậm.
 
 và cài thêm <b>ES7+ React/Redux/React-Native snippets</b>.
