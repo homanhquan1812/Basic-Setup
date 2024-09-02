@@ -406,7 +406,7 @@ Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
 1. Chọn **Static Site**.
 2. Chỉnh **CORS**, các link API trong **backend** sao cho phù hợp với link API đã deploy.
 3. Trong phần **Root Directory**, gõ `frontend`.
-4. Trong phần **Build Command**, gõ `npm run build`.
+4. Trong phần **Build Command**, gõ `npm install; npm run build`.
 5. Trong phần **Publish directory**, gõ `dist`.
 6. Thêm **.env** vào.
 
