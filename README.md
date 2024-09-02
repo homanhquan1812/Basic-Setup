@@ -393,14 +393,14 @@ Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
   <img src="https://github.com/user-attachments/assets/8e3bacf0-91a0-4994-a9ad-b45430b2fccb" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
-## Handlebars/EJS
-## MERN/PERN
+## MERN/PERN Stack
 > Thư mục project phải có đủ 2 thư mục **backend** và **frontend**.
 ### Deploy Backend
 1. Chọn **Web Service**.
 2. Trong phần **Root Directory**, gõ `backend`.
 3. Trong phần **Build Command**, gõ `npm install`.
 4. Trong phần **Start Command**, gõ `node src/index.js`.
+5. Thêm **.env** vào.
    
 ### Deploy Frontend
 1. Chọn **Static Site**.
@@ -408,3 +408,7 @@ Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
 3. Trong phần **Root Directory**, gõ `frontend`.
 4. Trong phần **Build Command**, gõ `npm run build`.
 5. Trong phần **Publish directory**, gõ `dist`.
+6. Thêm **.env** vào.
+
+## Handlebars/EJS
+(Như deploy Backend ở trên)
