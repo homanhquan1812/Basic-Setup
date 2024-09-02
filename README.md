@@ -387,3 +387,24 @@ export default App
 ```
 
 Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
+
+# Deploy Full-stack project lên Render
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/8e3bacf0-91a0-4994-a9ad-b45430b2fccb" alt="NodeJS + ExpressJS Logo" width="600">
+</div>
+
+## Handlebars/EJS
+## MERN/PERN
+> Thư mục project phải có đủ 2 thư mục **backend** và **frontend**.
+### Deploy Backend
+1. Chọn **Web Service**.
+2. Trong phần **Root Directory**, gõ `backend`.
+3. Trong phần **Build Command**, gõ `npm install`.
+4. Trong phần **Start Command**, gõ `node src/index.js`.
+   
+### Deploy Frontend
+1. Chọn **Static Site**.
+2. Chỉnh **CORS**, các link API trong **backend** sao cho phù hợp với link API đã deploy.
+3. Trong phần **Root Directory**, gõ `frontend`.
+4. Trong phần **Build Command**, gõ `npm run build`.
+5. Trong phần **Publish directory**, gõ `dist`.
