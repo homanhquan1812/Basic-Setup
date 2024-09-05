@@ -22,8 +22,10 @@ node key_generation.js
 
 * `200`: Lấy, cập nhật, xóa dữ liệu thành công.
 * `201`: Tạo dữ liệu thành công.
+* `400`: Thiếu thông tin cần thiết.
 * `401`: Lỗi xác thực (Login, Register,...).
 * `404`: Không tìm thấy dữ liệu.
+* `409`: Trùng lặp thông tin.
 * `500`: Lỗi server (Thường xảy ra ở Backend như code không phù hợp,...).
 
 ## Các gói thư viện All-in-one
