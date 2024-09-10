@@ -390,6 +390,16 @@ export default App
 
 Thế là ta đã xong 1 website có 2 trang chính và 1 trang phụ.
 
+# React Native
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7d2edc86-4457-4381-a988-7aa6bd3f302e" alt="NodeJS + ExpressJS Logo" width="600">
+</div>
+
+1. Mở Terminal, gõ:
+```
+npx create-expo-app@latest
+``` 
+
 # Deploy Full-stack project lên Render
 <div align="center">
   <img src="https://github.com/user-attachments/assets/8e3bacf0-91a0-4994-a9ad-b45430b2fccb" alt="NodeJS + ExpressJS Logo" width="600">
