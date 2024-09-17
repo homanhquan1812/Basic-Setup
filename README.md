@@ -44,12 +44,12 @@ Sau đó, cài đặt những gói thư viện All-in-one này:
 
 **1. MERN/PERN Stack**
 ```
-npm install express nodemon morgan mongoose dotenv bcrypt express-session express-rate-limit fs jsonwebtoken cors pg mysql2
+npm install express nodemon morgan mongoose dotenv bcrypt express-session express-rate-limit fs jsonwebtoken cors connect-mongo connect-pg-simple mongoose-delete pg mysql2
 ```
 
 **2. Handlebars/EJS**
 ```
-npm install express nodemon morgan mongoose express-handlebars ejs express-ejs-layouts dotenv method-override bcrypt express-session express-rate-limit fs jsonwebtoken pg mysql2
+npm install express nodemon morgan mongoose express-handlebars ejs express-ejs-layouts dotenv method-override bcrypt express-session express-rate-limit fs connect-mongo connect-pg-simple mongoose-delete jsonwebtoken pg mysql2
 ```
 
 Cụ thể hơn:
