@@ -421,6 +421,9 @@ npx create-expo-app@latest
 4. Trong phần **Build Command**, gõ `npm install; npm run build`.
 5. Trong phần **Publish directory**, gõ `dist`.
 6. Thêm **.env** vào.
+7. Vào phần **Redirects/Rewrites**, làm theo như sau:
+   ![image](https://github.com/user-attachments/assets/14d0caee-a736-463c-a849-7916ad524d26)
+
 
 ## Handlebars/EJS
 (Như deploy Backend ở trên)
