@@ -435,6 +435,7 @@ npx create-expo-app@latest
   <img src="https://github.com/user-attachments/assets/2053d549-8132-41de-a83b-098463900852" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 1. Tạo file **vercel.json** trong thư mục **Backend**.
+
 ```
 {
     "version": 2,
@@ -452,6 +453,7 @@ npx create-expo-app@latest
     ]
 }
 ```
+
 2. Deploy trên web **Vercel**.
 3. Cài **Vercel** trên máy tính. Dùng lệnh này trên **Terminal**:
 ```
