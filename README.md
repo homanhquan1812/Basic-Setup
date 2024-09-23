@@ -413,6 +413,9 @@ npx create-expo-app@latest
 3. Trong phần **Build Command**, gõ `npm install`.
 4. Trong phần **Start Command**, gõ `node src/index.js`.
 5. Thêm **.env** vào.
+
+> Ưu điểm: Setup dễ.
+> Nhược điểm: Chậm.
    
 ### Deploy Frontend
 1. Chọn **Static Site**.
@@ -424,6 +427,36 @@ npx create-expo-app@latest
 7. Vào phần **Redirects/Rewrites**, làm theo như sau:
    ![image](https://github.com/user-attachments/assets/14d0caee-a736-463c-a849-7916ad524d26)
 
-
 ## Handlebars/EJS
 (Như deploy Backend ở trên)
+
+# Deploy Backend lên Vercel
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2053d549-8132-41de-a83b-098463900852" alt="NodeJS + ExpressJS Logo" width="600">
+</div>
+1. Tạo file **vercel.json** trong thư mục **Backend**.
+```
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "src/index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/index.js"
+        }
+    ]
+}
+```
+2. Deploy trên web **Vercel**.
+3. Cài **Vercel** trên máy tính. Dùng lệnh này trên **Terminal**:
+```
+vercel --prod
+```
+
+> Ưu điểm: Nhanh.
+> Nhược điểm: Setup khó.
