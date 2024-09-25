@@ -435,6 +435,7 @@ npx create-expo-app@latest
 <div align="center">
   <img src="https://github.com/user-attachments/assets/2053d549-8132-41de-a83b-098463900852" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
+
 1. Tạo file **vercel.json** trong thư mục **Backend**.
 
 ```
