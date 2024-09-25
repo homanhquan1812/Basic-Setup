@@ -415,6 +415,7 @@ npx create-expo-app@latest
 5. Thêm **.env** vào.
 
 > Ưu điểm: Setup dễ.
+
 > Nhược điểm: Chậm.
    
 ### Deploy Frontend
@@ -461,4 +462,5 @@ vercel --prod
 ```
 
 > Ưu điểm: Nhanh.
-> Nhược điểm: Setup khó.
+
+> Nhược điểm: Setup khó và phải deploy lại khi project có update trên Github (Dù không liên quan tới Backend).
