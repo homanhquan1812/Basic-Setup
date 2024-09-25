@@ -457,6 +457,7 @@ npx create-expo-app@latest
 
 2. Deploy trên web **Vercel**.
 3. Cài **Vercel** trên máy tính. Dùng lệnh này trên **Terminal**:
+   
 ```
 vercel --prod
 ```
