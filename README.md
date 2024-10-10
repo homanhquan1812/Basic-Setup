@@ -1,38 +1,26 @@
-# NodeJS & ExpressJS
+# NestJS
 <div align="center">
-  <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fphm9w85asky1ja15jg4y.png" alt="NodeJS + ExpressJS Logo" width="600">
+  <img src="https://github.com/user-attachments/assets/1687c224-a79b-411c-82b4-abd25b2b1e1e" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
-## Project này gồm tính năng nổi bật gì của NodeJS & ExpressJS?
-1. `Bcrypt`.
-2. `Middleware`: Là đoạn mã trung gian nằm giữa **req** và **res**, thường được sử dụng để xác thực, ghi log, xử lý lỗi,...
-3. `Rate Limit`.
-4. `Session & Cookie`.
-5. `JWT (JSON Web Token)`.
-6. `API Key Generator`: Tạo ra các đoạn mã như `SECRET_KEY`,... để bỏ vào trong file `.env`.
-Cách chạy: Vào thư mục `util`, gõ:
+## Cách cài đặt
+Mở Terminal lên, cài đặt **NestJS**:
 ```
-node key_generation.js
+npm i -g @nestjs/cli
+```
+sau đó tạo thư mục dự án, chạy:
+```
+nest new
 ```
 
-## Các status cơ bản từ các lệnh thực thi **CRUD** trên dữ liệu JSON
+Sau khi hoàn thành, dùng lệnh **npm run start** để mở website backend NestJS.
+
+# ExpressJS
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/d7acc486-93da-433a-b647-24eafae76aca" width="600">
+  <img src="https://github.com/user-attachments/assets/d6f0107a-ea30-4d2b-95e3-3a011d592f46" alt="NodeJS + ExpressJS Logo" width="600">
 </div>
 
-* `200`: Lấy, cập nhật, xóa dữ liệu thành công.
-* `201`: Tạo dữ liệu thành công.
-* `400`: Thiếu thông tin cần thiết.
-* `401`: Lỗi xác thực (Login, Register,...).
-* `404`: Không tìm thấy dữ liệu.
-* `409`: Trùng lặp thông tin.
-* `500`: Lỗi server (Thường xảy ra ở Backend như code không phù hợp,...).
-
-## Các gói thư viện All-in-one
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/0da0bd7f-e8b2-4f0a-8f01-b2869e572ca8" alt="NodeJS + ExpressJS Logo" width="600">
-</div>
-
+## Cách cài đặt
 ### Bước 1
 Mở Terminal lên, tạo dự án bằng cách chạy:
 ```
@@ -40,7 +28,7 @@ npm init
 ```
 rồi hoàn thành quy trình cài đặt đầu tiên.
 
-Sau đó, cài đặt những gói thư viện All-in-one này:
+Sau đó, cài đặt những gói thư viện **All-in-one** này:
 
 **1. MERN/PERN Stack**
 ```
@@ -51,88 +39,6 @@ npm install express nodemon morgan mongoose dotenv bcrypt express-session expres
 ```
 npm install express nodemon morgan mongoose express-handlebars ejs express-ejs-layouts dotenv method-override bcrypt express-session express-rate-limit fs connect-mongo connect-pg-simple mongoose-delete jsonwebtoken pg mysql2
 ```
-
-Cụ thể hơn:
-* `express`: Chứa các tập tin cần thiết của NodeJS và ExpressJS để xây dựng Backend.
-```
-npm install express
-```
-* `nodemon`: Giúp khởi động lại ứng dụng Node khi phát hiện có sự thay đổi file hoặc code trong file của dự án.
-```
-npm install nodemon
-```
-* `morgan`: Cho phép ta dễ dàng ghi lại các yêu cầu, lỗi và hơn thế nữa vào **Console/Terminal**. Thường được sử dụng để coi web hỗ trợ Real-time Data (cập nhật thông tin ngay lập tức) hay không.
-```
-npm install morgan
-```
-* `mongoose`: Là một thư viện mô hình hóa đối tượng (Object Data Model - ODM) cho MongoDB và Node.js, được dùng để quản lý các kiểu dữ liệu từ database để website có thể sử dụng.
-```
-npm install mongoose
-```
-* `express-handlebars`: Chứa các tập tin cần thiết của Handlebars để thay thế cho HTML thông thường.
-```
-npm install express-handlebars
-```
-* `dotenv`: Giúp lưu trữ các thông tin nhạy cảm như **API KEY** hoặc **SECRET KEY** bên ngoài mã nguồn, giảm nguy cơ lộ thông tin khi chia sẻ mã nguồn.
-```
-npm install dotenv
-```
-* `bcrypt`: Tăng bảo mật cho Login/Register.
-```
-npm install bcrypt
-```
-* `method-override`: Dùng để cập nhật/xóa dữ liệu (Chỉ dùng cho Handlebars/EJS).
-```
-npm install method-override
-```
-* `cors`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
-```
-npm install cors
-```
-* `pg`: Chứa các dữ liệu cần thiết để kết nối database PostgreSQL.
-```
-npm install pg
-```
-* `mysql2`: Chứa các dữ liệu cần thiết để kết nối database MySQL (Bản `mysql2` tốt hơn `mysql`).
-```
-npm install mysql2
-```
-* `ejs`: Chứa các tập tin cần thiết của EJS để thay thế cho HTML thông thường.
-```
-npm install ejs
-```
-* `express-ejs-layouts`: Không giống như **Handlebars**, ta phải cài thêm **layouts** để chứa các file page.
-```
-npm install express-ejs-layouts
-```
-* `express-session`: Session & Cookie
-  - **Session**: Là phiên làm việc giữa client và server, thông tin phiên làm việc được lưu trữ trên server và được liên kết với 1 session ID duy nhất. Session sẽ kết thúc khi bạn tắt trình duyệt. **Cơ cấu hoạt động:** Sau khi đăng nhập xong (mình sẽ tạm gọi đây là request đầu tiên), server sẽ tạo một session và dữ liệu của session sẽ được lưu ở trên bộ nhớ của server. Mỗi session thì có một ID riêng, và ID này sẽ được lưu ở cookie trên trình duyệt của người dùng. Từ request thứ 2 trở đi, cookie sẽ được gửi kèm theo mỗi request. Server có thể so khớp session ID trong cookies được gửi kèm kia với session data lưu ở trong bộ nhớ, qua đó xác thực danh tính của người dùng vào trả về response. Đến khi đăng xuất, toàn bộ session data này sẽ bị xóa khỏi bộ nhớ.
-
-  - **Cookie**: Là đoạn dữ liệu được lưu trữ trong trình duyệt, thường được sử dụng để lưu trữ session ID, sở thích của người dùng trên Internet,...
-```
-npm install express-session
-```
-* `express-rate-limit`: Giới hạn số lần đăng nhập sai.
-```
-npm install express-rate-limit
-```
-* `fs`: Ghi đè file, ở project này thì dùng để viết ngẫu nhiên các thông tin nhạy cảm như `API_KEY` và `SECRET_KEY` trong file `keygeneration.js` ở dưới.
-```
-npm install fs
-```
-* `jsonwebtoken`: JWT là một tiêu chuẩn mở cho việc tạo ra các token truy cập an toàn dựa trên JSON, thường được sử dụng để xác thực và ủy quyền người dùng trong ứng dụng web và di động.
-
-Thông thường, nếu so với `Session`:
-   * `Session`: Bảo mật tốt hơn. Nhược điểm là nếu hoạt động nhiều server cùng 1 lúc, session ID gửi kèm theo request thì có thể được tìm thấy ở server này nhưng lại không ở server khác, dẫn đến trải nghiệm tồi tệ.
-   * `JWT`: Hiệu suất và khả năng mở rộng tốt hơn vì token được lưu ở phía **Client**, không phải ở phía **Server** như `Session` nên tối ưu bộ nhớ hơn. Nhược điểm là: JWT chứa thông tin người dùng nhiều hơn so với Session ID và phải cẩn thận về vấn đề bảo mật hơn như lưu trữ token,...
-```
-npm install jsonwebtoken
-```
-* `mongoose-delete` (Tùy chọn - Chỉ dành cho MongoDB): Thay vì xóa hẳn dữ liệu khỏi database, ta dùng thư viện để **xóa mềm** bằng cách đặt `deleted: true` hoặc `deleted: false`.
-```
-npm install mongoose-delete
-```
-
 
 ### Bước 2
 Vào file <b>package.json</b>, thêm dòng này tại <b>scripts</b>:
@@ -466,3 +372,100 @@ vercel --prod
 > Ưu điểm: Nhanh.
 
 > Nhược điểm: Setup khó và phải deploy lại khi project có update trên Github (Dù không liên quan tới Backend).
+
+
+# Kiến thức cơ bản khác trong Backend
+## Các status cơ bản từ các lệnh thực thi **CRUD** trên dữ liệu JSON
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/d7acc486-93da-433a-b647-24eafae76aca" width="600">
+</div>
+
+* `200`: Lấy, cập nhật, xóa dữ liệu thành công.
+* `201`: Tạo dữ liệu thành công.
+* `400`: Thiếu thông tin cần thiết.
+* `401`: Lỗi xác thực (Login, Register,...).
+* `404`: Không tìm thấy dữ liệu.
+* `409`: Trùng lặp thông tin.
+* `500`: Lỗi server (Thường xảy ra ở Backend như code không phù hợp,...).
+
+## Chi tiết các thư viện của NodeJS
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0da0bd7f-e8b2-4f0a-8f01-b2869e572ca8" alt="NodeJS + ExpressJS Logo" width="600">
+</div>
+
+* `express`: Chứa các tập tin cần thiết của NodeJS và ExpressJS để xây dựng Backend.
+```
+npm install express
+```
+* `nodemon`: Giúp khởi động lại ứng dụng Node khi phát hiện có sự thay đổi file hoặc code trong file của dự án.
+```
+npm install nodemon
+```
+* `morgan`: Cho phép ta dễ dàng ghi lại các yêu cầu, lỗi và hơn thế nữa vào **Console/Terminal**. Thường được sử dụng để coi web hỗ trợ Real-time Data (cập nhật thông tin ngay lập tức) hay không.
+```
+npm install morgan
+```
+* `mongoose`: Là một thư viện mô hình hóa đối tượng (Object Data Model - ODM) cho MongoDB và Node.js, được dùng để quản lý các kiểu dữ liệu từ database để website có thể sử dụng.
+```
+npm install mongoose
+```
+* `express-handlebars`: Chứa các tập tin cần thiết của Handlebars để thay thế cho HTML thông thường.
+```
+npm install express-handlebars
+```
+* `dotenv`: Giúp lưu trữ các thông tin nhạy cảm như **API KEY** hoặc **SECRET KEY** bên ngoài mã nguồn, giảm nguy cơ lộ thông tin khi chia sẻ mã nguồn.
+```
+npm install dotenv
+```
+* `bcrypt`: Tăng bảo mật cho Login/Register.
+```
+npm install bcrypt
+```
+* `method-override`: Dùng để cập nhật/xóa dữ liệu (Chỉ dùng cho Handlebars/EJS).
+```
+npm install method-override
+```
+* `cors`: à một cơ chế cho phép nhiều tài nguyên khác nhau của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
+```
+npm install cors
+```
+* `pg`: Chứa các dữ liệu cần thiết để kết nối database PostgreSQL.
+```
+npm install pg
+```
+* `mysql2`: Chứa các dữ liệu cần thiết để kết nối database MySQL (Bản `mysql2` tốt hơn `mysql`).
+```
+npm install mysql2
+```
+* `ejs`: Chứa các tập tin cần thiết của EJS để thay thế cho HTML thông thường.
+```
+npm install ejs
+```
+* `express-ejs-layouts`: Không giống như **Handlebars**, ta phải cài thêm **layouts** để chứa các file page.
+```
+npm install express-ejs-layouts
+```
+* `express-session`: Session & Cookie
+  - **Session**: Là phiên làm việc giữa client và server, thông tin phiên làm việc được lưu trữ trên server và được liên kết với 1 session ID duy nhất. Session sẽ kết thúc khi bạn tắt trình duyệt. **Cơ cấu hoạt động:** Sau khi đăng nhập xong (mình sẽ tạm gọi đây là request đầu tiên), server sẽ tạo một session và dữ liệu của session sẽ được lưu ở trên bộ nhớ của server. Mỗi session thì có một ID riêng, và ID này sẽ được lưu ở cookie trên trình duyệt của người dùng. Từ request thứ 2 trở đi, cookie sẽ được gửi kèm theo mỗi request. Server có thể so khớp session ID trong cookies được gửi kèm kia với session data lưu ở trong bộ nhớ, qua đó xác thực danh tính của người dùng vào trả về response. Đến khi đăng xuất, toàn bộ session data này sẽ bị xóa khỏi bộ nhớ.
+
+  - **Cookie**: Là đoạn dữ liệu được lưu trữ trong trình duyệt, thường được sử dụng để lưu trữ session ID, sở thích của người dùng trên Internet,...
+```
+npm install express-session
+```
+* `express-rate-limit`: Giới hạn số lần đăng nhập sai.
+```
+npm install express-rate-limit
+```
+* `jsonwebtoken`: JWT là một tiêu chuẩn mở cho việc tạo ra các token truy cập an toàn dựa trên JSON, thường được sử dụng để xác thực và ủy quyền người dùng trong ứng dụng web và di động.
+
+Thông thường, nếu so với `Session`:
+   * `Session`: Bảo mật tốt hơn. Nhược điểm là nếu hoạt động nhiều server cùng 1 lúc, session ID gửi kèm theo request thì có thể được tìm thấy ở server này nhưng lại không ở server khác, dẫn đến trải nghiệm tồi tệ.
+   * `JWT`: Hiệu suất và khả năng mở rộng tốt hơn vì token được lưu ở phía **Client**, không phải ở phía **Server** như `Session` nên tối ưu bộ nhớ hơn. Nhược điểm là: JWT chứa thông tin người dùng nhiều hơn so với Session ID và phải cẩn thận về vấn đề bảo mật hơn như lưu trữ token,...
+```
+npm install jsonwebtoken
+```
+* `mongoose-delete` (Tùy chọn - Chỉ dành cho MongoDB): Thay vì xóa hẳn dữ liệu khỏi database, ta dùng thư viện để **xóa mềm** bằng cách đặt `deleted: true` hoặc `deleted: false`.
+```
+npm install mongoose-delete
+```
